@@ -1,0 +1,12 @@
+---
+name: 'instagramfeed'
+After: 'mysite/*'
+---
+
+SiteConfig:
+  extensions:
+    - InstagramSiteConfigExtension
+
+Page:
+  extensions:
+    - InstagramFeedExtension

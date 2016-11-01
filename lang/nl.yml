@@ -1,0 +1,11 @@
+nl:
+  InstagramFeed:
+    ShowFeed: 'Laat feed zien'
+    NumberOfItems: 'Aantal items'
+    RandomImages: 'Willekeurige items'
+    UserDetails: 'Instagram Gebruikersdetails'
+    ClientID: 'Client ID'
+    ClientSecret: 'Client Secret'
+    AccessToken: 'Access Token'
+    FeedDefaults: 'Standaardwaarden van de feed'
+    CachingTime: 'Feed cache'

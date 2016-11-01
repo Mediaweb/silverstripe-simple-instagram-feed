@@ -1,0 +1,27 @@
+{
+  "name": "mediaweb/silverstripe-simple-instagram-feed",
+  "description": "A simple yet configurable instagram user feed",
+  "type": "silverstripe-module",
+  "keywords": [
+    "silverstripe",
+    "instagram",
+    "feed",
+    "module",
+    "cms"
+  ],
+  "license": "GPLv3",
+  "authors": [
+    {
+      "name": "Jan-Pieter van der Poel",
+      "email": "jp@loyals.nl"
+    }
+  ],
+  "require": {
+    "silverstripe/framework": "~3.4",
+    "silverstripe/display-logic": "dev-master"
+  },
+  "extra": {
+    "installer-name": "instagram-feed"
+  },
+  "target-dir": "instagram-feed"
+}

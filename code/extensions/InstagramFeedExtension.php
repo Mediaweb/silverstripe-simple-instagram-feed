@@ -8,7 +8,7 @@ class InstagramFeedExtension extends DataExtension
         'ShowFeed'      => 'Boolean',
     ];
 
-    public function updateCMSFields(FieldList &$fields)
+    public function updateCMSFields(FieldList $fields)
     {
         $fields->addFieldsToTab('Root.InstagramFeed', [
             CheckboxField::create('ShowFeed', _t('InstagramFeed.ShowFeed', 'Show Feed')),

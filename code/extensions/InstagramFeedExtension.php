@@ -3,7 +3,7 @@
 class InstagramFeedExtension extends DataExtension
 {
     private static $db = [
-        'NumberOfItems' => 'Varchar(10)',
+        'NumberOfItems' => 'Enum("2,4,6,8,10,12","6")',
         'RandomImages'  => 'Boolean',
         'ShowFeed'      => 'Boolean',
     ];
@@ -12,7 +12,7 @@ class InstagramFeedExtension extends DataExtension
     {
         $fields->addFieldsToTab('Root.InstagramFeed', [
             CheckboxField::create('ShowFeed', _t('InstagramFeed.ShowFeed', 'Show Feed')),
-            TextField::create('NumberOfItems', _t('InstagramFeed.NumberOfItems', 'Number of images to show')),
+            DropdownField::create('NumberOfItems', _t('InstagramFeed.NumberOfItems', 'Number of images to show'), $this->owner->dbObject('NumberOfItems')->enumValues()),
             CheckboxField::create('RandomImages', _t('InstagramFeed.RandomImages', 'Randomize images')),
         ]);
 

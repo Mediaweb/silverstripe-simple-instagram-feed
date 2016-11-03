@@ -6,7 +6,7 @@ class InstagramSiteConfigExtension extends DataExtension
         'InstagramClientID'     => 'Varchar(255)',
         'InstagramClientSecret' => 'Varchar(255)',
         'InstagramAccessToken'  => 'Varchar(255)',
-        'NumberOfItems'         => 'Varchar(10)',
+        'NumberOfItems'         => 'Enum("2,4,6,8,10,12","6")',
         'RandomImages'          => 'Boolean',
         'CachingTime'           => 'Varchar(10)',
     ];
@@ -24,7 +24,7 @@ class InstagramSiteConfigExtension extends DataExtension
             HeaderField::create('FeedDefaults', _t('InstagramFeed.FeedDefaults', 'Instagram Display Defaults')),
             TextField::create('CachingTime', _t('InstagramFeed.CachingTime', 'Feed cache (in seconds)'))
                 ->setAttribute('placeholder', '600'),
-            TextField::create('NumberOfItems', _t('InstagramFeed.NumberOfItems', 'Number of images to show')),
+            DropdownField::create('NumberOfItems', _t('InstagramFeed.NumberOfItems', 'Number of images to show'), $this->owner->dbObject('NumberOfItems')->enumValues()),
             CheckboxField::create('RandomImages', _t('InstagramFeed.RandomImages', 'Randomize images')),
         ]);
     }
